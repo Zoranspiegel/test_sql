@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { DotGothic16 } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const dotGothic16 = DotGothic16({ subsets: ['latin'], weight: '400' });
 
 export const metadata: Metadata = {
   title: 'TestSQL',
@@ -16,7 +16,7 @@ export default function RootLayout ({
 }>): JSX.Element {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body className={`${dotGothic16.className} text-[#5ac53f]`}>{children}</body>
     </html>
   );
 }
