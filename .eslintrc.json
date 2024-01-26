@@ -16,6 +16,11 @@
     ],
     "rules": {
         "@typescript-eslint/semi": ["error", "always"],
+        "@typescript-eslint/no-misused-promises": [2, {
+            "checksVoidReturn": {
+              "attributes": false
+            }
+          }],
         "react/react-in-jsx-scope": "off",
         "react/prop-types": "off"
     }
