@@ -4,7 +4,8 @@ import { jwtVerify } from 'jose';
 export async function middleware (request: NextRequest): Promise<NextResponse | undefined> {
   const pathname = request.nextUrl.pathname;
   const authenticatedAPIRoutes = [
-    pathname.startsWith('/api/users')
+    pathname.startsWith('/api/users'),
+    pathname.startsWith('/api/posts')
   ];
 
   if (authenticatedAPIRoutes.includes(true)) {
