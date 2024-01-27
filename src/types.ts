@@ -12,3 +12,12 @@ interface UserProfile {
   username: string
   avatar: string
 }
+
+interface Post {
+  id: string
+  user_id: string
+  username: string
+  avatar: string
+  content: string
+  created_at: string
+}
