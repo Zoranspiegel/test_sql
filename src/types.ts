@@ -6,3 +6,9 @@ interface UserSignup {
 }
 
 type UserLogin = Omit<UserSignup, 'confirmPassword'>;
+
+interface UserProfile {
+  id: string
+  username: string
+  avatar: string
+}
