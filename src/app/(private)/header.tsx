@@ -13,7 +13,7 @@ export default function Header (): JSX.Element {
       className='flex w-full justify-between items-center rounded-lg bg-gray-800 py-4 px-6'
     >
       <div>
-        <h1>TestSQL</h1>
+        <h1 className='text-2xl font-bold'>TestSQL</h1>
       </div>
       <User data={data} href='account'/>
     </header>
