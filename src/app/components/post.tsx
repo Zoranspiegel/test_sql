@@ -6,8 +6,7 @@ const dateOptions: Intl.DateTimeFormatOptions = {
   month: 'long',
   day: 'numeric',
   hour: 'numeric',
-  minute: 'numeric',
-  timeZone: 'America/Bogota'
+  minute: 'numeric'
 };
 
 export default function Post ({
@@ -34,11 +33,13 @@ export default function Post ({
         </Link>
       </div>
       <div className='flex flex-col max-w-xs'>
-        <Link
-          href={`/${post.username}`}
-          className='font-bold'
-        >{post.username}</Link>
-        <div className='text-gray-400'>{new Date(post.created_at).toLocaleDateString('es-mx', dateOptions)}</div>
+        <div className=''>
+          <Link
+            href={`/${post.username}`}
+            className='font-bold'
+          >{post.username}</Link>
+        </div>
+        <div className='text-gray-400'>{new Date(post.created_at).toLocaleDateString('en-us', dateOptions)}</div>
         <div className='mt-2'>{post.content}</div>
       </div>
     </li>

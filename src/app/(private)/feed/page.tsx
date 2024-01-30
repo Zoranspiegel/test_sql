@@ -1,5 +1,5 @@
 'use client';
-import PostsContainer from './posts-container';
+import PostsContainer from '@/app/components/posts-container';
 import { useState } from 'react';
 
 export default function Feed (): JSX.Element {
@@ -7,7 +7,7 @@ export default function Feed (): JSX.Element {
 
   const posts = [];
   for (let i = 0; i < pageState; i++) {
-    posts.push(<PostsContainer key={i} page={i}/>);
+    posts.push(<PostsContainer key={i} page={i} endpoint='/api/posts/feed'/>);
   }
 
   return (
@@ -15,7 +15,7 @@ export default function Feed (): JSX.Element {
       {posts}
       <button
         onClick={() => { setPageState(pageState + 1); }}
-        className='rounded-lg bg-gray-600 py-2 px-4'
+        className='rounded-lg bg-gray-600 py-2 px-4 border-[#5ac53f] border-2'
       >
         Load more...
       </button>

@@ -77,7 +77,7 @@ export default function LoginForm (): JSX.Element {
       )}
       <button
         type='submit'
-        className='rounded-lg bg-gray-600 px-4 py-2'
+        className='rounded-lg bg-gray-600 px-4 py-2 border-[#5ac53f] border-2'
       >Log In</button>
     </form>
   );
