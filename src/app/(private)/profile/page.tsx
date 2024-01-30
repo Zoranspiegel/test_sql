@@ -8,7 +8,7 @@ export default function Profile (): JSX.Element {
 
   const pages = [];
   for (let i = 0; i < pageState; i++) {
-    pages.push(<PostsContainer page={i} endpoint='/api/posts'/>);
+    pages.push(<PostsContainer page={i} endpoint='/api/posts' key={i}/>);
   }
 
   return (
