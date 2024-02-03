@@ -14,10 +14,11 @@ export default function UsersContainer ({
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>ERROR</div>;
   return (
-    <ul>
+    <ul className='flex flex-col w-full'>
       {data?.map((user: UserProfile) => (
         <li
           key={user.id}
+          className='mb-6'
         >
           <User data={user}/>
         </li>

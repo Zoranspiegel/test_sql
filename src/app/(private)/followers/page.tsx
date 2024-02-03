@@ -1,12 +1,13 @@
 'use client';
 import { useState } from 'react';
+import UsersContainer from '@/app/components/users-container';
 
 export default function Followers (): JSX.Element {
   const [pageState, setPageState] = useState<number>(1);
 
   const userPages = [];
   for (let i = 0; i < pageState; i++) {
-    userPages.push();
+    userPages.push(<UsersContainer key={i} page={i} url='/api/followers'/>);
   }
   return (
     <div className='flex flex-col w-full justify-start items-center'>
