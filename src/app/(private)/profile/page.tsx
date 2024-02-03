@@ -12,7 +12,7 @@ export default function Profile (): JSX.Element {
   }
 
   return (
-    <div className='flex flex-col justify-start items-start w-full gap-4'>
+    <div className='flex flex-col justify-start items-center w-full'>
       <ProfileForm />
       {pages}
       <button

@@ -27,12 +27,13 @@ export default function ProfileForm (): JSX.Element {
   return (
     <form
       onSubmit={handleSubmit}
-      className='flex flex-col w-full justify-start items-start gap-2'
+      className='flex flex-col w-full justify-start items-start gap-2 mb-6'
     >
       <textarea
         value={contentState}
         onChange={handleChange}
         placeholder='What is happening?'
+        rows={4}
         className='rounded-lg w-full max-w-xs bg-gray-700 p-2 resize-none'
       />
       <button

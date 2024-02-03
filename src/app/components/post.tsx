@@ -13,7 +13,7 @@ export default function Post ({
   post
 }: { post: Post }): JSX.Element {
   return (
-    <li
+    <div
       className='flex gap-4'
     >
       <div>
@@ -42,6 +42,6 @@ export default function Post ({
         <div className='text-gray-400'>{new Date(post.created_at).toLocaleDateString('en-us', dateOptions)}</div>
         <div className='mt-2'>{post.content}</div>
       </div>
-    </li>
+    </div>
   );
 }

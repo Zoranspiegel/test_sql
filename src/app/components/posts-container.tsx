@@ -16,9 +16,11 @@ export default function PostsContainer ({
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error</div>;
   return (
-    <ul className='flex w-full flex-col items-start gap-4'>
+    <ul className='flex w-full flex-col items-start'>
       {data?.map((post: Post) => (
-        <Post key={post.id} post={post}/>
+        <li key={post.id} className='mb-4'>
+          <Post post={post}/>
+        </li>
       ))}
     </ul>
   );
