@@ -18,16 +18,16 @@ export default function NavBar (): JSX.Element {
         Profile
       </Link>
       <Link
-        href='/'
-        className={pathname === '/' ? 'text-white' : ''}
+        href='/following'
+        className={pathname === '/following' ? 'text-white' : ''}
       >
-        X
+        Following
       </Link>
       <Link
-        href='/'
-        className={pathname === '/' ? 'text-white' : ''}
+        href='/followers'
+        className={pathname === '/followers' ? 'text-white' : ''}
       >
-        X
+        Followers
       </Link>
     </nav>
   );
